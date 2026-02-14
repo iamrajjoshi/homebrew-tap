@@ -11,7 +11,7 @@ class Willow < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/iamrajjoshi/willow/releases/download/v0.2.0/willow_darwin_amd64.tar.gz"
-      sha256 "2499a6f0d27fb7ce335362999e4713a950dcf69d2babd58b43b134a832fe5229"
+      sha256 "3ec72cb44312e79a746ba8012277ed2eb352ecfcf1e41dfe2d06568041878c4c"
 
       def install
         bin.install "willow"
@@ -19,7 +19,7 @@ class Willow < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/iamrajjoshi/willow/releases/download/v0.2.0/willow_darwin_arm64.tar.gz"
-      sha256 "c392d3f1e151d8bcd94019a040b3c4e8221277c76b692578e0ee5d0b52779c81"
+      sha256 "92070950580e08a02dc5083b5461cdb4294e28dfd486be867f2c27d6c6a5859a"
 
       def install
         bin.install "willow"
@@ -30,14 +30,14 @@ class Willow < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/iamrajjoshi/willow/releases/download/v0.2.0/willow_linux_amd64.tar.gz"
-      sha256 "6822493e826a40b3bc819db40cd016670e173c8fcf5dced507879cc8660364f4"
+      sha256 "a118aa67d843e4a63fe8482f5c577cab87636598d2cf92e39bce027830f42021"
       def install
         bin.install "willow"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/iamrajjoshi/willow/releases/download/v0.2.0/willow_linux_arm64.tar.gz"
-      sha256 "03f8a058845eee20897ec98dc634e3c507fe45c14b69745edd2d364f64f32686"
+      sha256 "639b9bc909baca95a650929a7f01660a28b83667bda916bb7089f2e1f19bcd11"
       def install
         bin.install "willow"
       end
