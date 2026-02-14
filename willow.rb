@@ -5,21 +5,21 @@
 class Willow < Formula
   desc "A simple, opinionated git worktree manager"
   homepage "https://github.com/iamrajjoshi/willow"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/iamrajjoshi/willow/releases/download/v0.1.0/willow_darwin_amd64.tar.gz"
-      sha256 "d69669f5b3315671418c4265d479d426b0f44f0bf4952b7b5679d70b82bb7550"
+      url "https://github.com/iamrajjoshi/willow/releases/download/v0.1.1/willow_darwin_amd64.tar.gz"
+      sha256 "1b31f68f1ee05eaf439160885572356c99f9244b1f0616a9b93b92f2793061cf"
 
       def install
         bin.install "willow"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/iamrajjoshi/willow/releases/download/v0.1.0/willow_darwin_arm64.tar.gz"
-      sha256 "fe75ad190f9279b885f3f1c78cd5699f91f929ce7bb749514aa5b91a1ecc64c2"
+      url "https://github.com/iamrajjoshi/willow/releases/download/v0.1.1/willow_darwin_arm64.tar.gz"
+      sha256 "b74d440b5ca3170b1c35e9f35154fa58190c7d9b75221ec65a0a56cf7bcb17c5"
 
       def install
         bin.install "willow"
@@ -29,15 +29,15 @@ class Willow < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iamrajjoshi/willow/releases/download/v0.1.0/willow_linux_amd64.tar.gz"
-      sha256 "21023533d33e62deff27b2521b80473161233ba27df3f18e9f2d34c675136893"
+      url "https://github.com/iamrajjoshi/willow/releases/download/v0.1.1/willow_linux_amd64.tar.gz"
+      sha256 "9ab2cb6829c644a90df86deb806e6eb0a3f38812a049614c6b4e4db8fdcffccd"
       def install
         bin.install "willow"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iamrajjoshi/willow/releases/download/v0.1.0/willow_linux_arm64.tar.gz"
-      sha256 "15428942972a11a079636318192470ea13910e1190221b72b66bd5d28037c4db"
+      url "https://github.com/iamrajjoshi/willow/releases/download/v0.1.1/willow_linux_arm64.tar.gz"
+      sha256 "5ed2a388c09ca73ddf936cd9f1543ce3779f029e4e8371a1533b9a320005ed7b"
       def install
         bin.install "willow"
       end
@@ -45,6 +45,6 @@ class Willow < Formula
   end
 
   test do
-    system "#{bin}/willow", "--version"
+    system bin/"willow", "--version"
   end
 end
