@@ -5,21 +5,21 @@
 class Willow < Formula
   desc "A simple, opinionated git worktree manager"
   homepage "https://github.com/iamrajjoshi/willow"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/iamrajjoshi/willow/releases/download/v0.1.1/willow_darwin_amd64.tar.gz"
-      sha256 "1b31f68f1ee05eaf439160885572356c99f9244b1f0616a9b93b92f2793061cf"
+      url "https://github.com/iamrajjoshi/willow/releases/download/v0.2.0/willow_darwin_amd64.tar.gz"
+      sha256 "2499a6f0d27fb7ce335362999e4713a950dcf69d2babd58b43b134a832fe5229"
 
       def install
         bin.install "willow"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/iamrajjoshi/willow/releases/download/v0.1.1/willow_darwin_arm64.tar.gz"
-      sha256 "b74d440b5ca3170b1c35e9f35154fa58190c7d9b75221ec65a0a56cf7bcb17c5"
+      url "https://github.com/iamrajjoshi/willow/releases/download/v0.2.0/willow_darwin_arm64.tar.gz"
+      sha256 "c392d3f1e151d8bcd94019a040b3c4e8221277c76b692578e0ee5d0b52779c81"
 
       def install
         bin.install "willow"
@@ -29,15 +29,15 @@ class Willow < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iamrajjoshi/willow/releases/download/v0.1.1/willow_linux_amd64.tar.gz"
-      sha256 "9ab2cb6829c644a90df86deb806e6eb0a3f38812a049614c6b4e4db8fdcffccd"
+      url "https://github.com/iamrajjoshi/willow/releases/download/v0.2.0/willow_linux_amd64.tar.gz"
+      sha256 "6822493e826a40b3bc819db40cd016670e173c8fcf5dced507879cc8660364f4"
       def install
         bin.install "willow"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iamrajjoshi/willow/releases/download/v0.1.1/willow_linux_arm64.tar.gz"
-      sha256 "5ed2a388c09ca73ddf936cd9f1543ce3779f029e4e8371a1533b9a320005ed7b"
+      url "https://github.com/iamrajjoshi/willow/releases/download/v0.2.0/willow_linux_arm64.tar.gz"
+      sha256 "03f8a058845eee20897ec98dc634e3c507fe45c14b69745edd2d364f64f32686"
       def install
         bin.install "willow"
       end
