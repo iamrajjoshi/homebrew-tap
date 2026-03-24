@@ -5,21 +5,21 @@
 class Willow < Formula
   desc "A simple, opinionated git worktree manager"
   homepage "https://github.com/iamrajjoshi/willow"
-  version "0.8.1"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/iamrajjoshi/willow/releases/download/v0.8.1/willow_darwin_amd64.tar.gz"
-      sha256 "82f4b64d354a149929984300dab14f7eb8521f832db4b43346ac6da445a84a18"
+      url "https://github.com/iamrajjoshi/willow/releases/download/v1.0.0/willow_darwin_amd64.tar.gz"
+      sha256 "95ccd6d0d7f81028207653b2a130fcebadf546100632d80d8d94fb6654f188ed"
 
       define_method(:install) do
         bin.install "willow"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/iamrajjoshi/willow/releases/download/v0.8.1/willow_darwin_arm64.tar.gz"
-      sha256 "b5e57fa54c7d0bdb2a494ea0c3fe25ee203e68ca735a91c80375ccd9d610dbba"
+      url "https://github.com/iamrajjoshi/willow/releases/download/v1.0.0/willow_darwin_arm64.tar.gz"
+      sha256 "67ce3ff3ac4af4d7d79173ab660c86c2ff323c9f7179af4cbfc6c81d9f68ceb1"
 
       define_method(:install) do
         bin.install "willow"
@@ -29,15 +29,15 @@ class Willow < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iamrajjoshi/willow/releases/download/v0.8.1/willow_linux_amd64.tar.gz"
-      sha256 "4741257aa794f099d2023d5634e8a05de20ae94d389abc7277696ebf2b71ed0b"
+      url "https://github.com/iamrajjoshi/willow/releases/download/v1.0.0/willow_linux_amd64.tar.gz"
+      sha256 "95c613692fb5bfef53086d8bedef60faec7c5314f36c893bbfc39b30e7da8544"
       define_method(:install) do
         bin.install "willow"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iamrajjoshi/willow/releases/download/v0.8.1/willow_linux_arm64.tar.gz"
-      sha256 "be4a044c8e9bfe9b7606dfeebb9e83d4d06c34c7a6fc84dab106b38ce745245b"
+      url "https://github.com/iamrajjoshi/willow/releases/download/v1.0.0/willow_linux_arm64.tar.gz"
+      sha256 "9cbd50a2dcb794c5a563330039e07d6d9b8d450f5c55874ac86899d2f4456c6f"
       define_method(:install) do
         bin.install "willow"
       end
