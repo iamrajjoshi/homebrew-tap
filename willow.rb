@@ -11,7 +11,7 @@ class Willow < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/iamrajjoshi/willow/releases/download/v1.2.1/willow_darwin_amd64.tar.gz"
-      sha256 "0a1ea61ce3025c7059b531e24fe9f330d7956509f22e523b6fbc2a8e485a89c2"
+      sha256 "9d569124f2cfb490526b50c63bf497f925d1e0ecd148054456fa6b8701177497"
 
       define_method(:install) do
         bin.install "willow"
@@ -19,7 +19,7 @@ class Willow < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/iamrajjoshi/willow/releases/download/v1.2.1/willow_darwin_arm64.tar.gz"
-      sha256 "253650551a33f25c7af1649581013af8d8231c9ed10e5526cf906409dbf9a110"
+      sha256 "3336d692220940f4efbd0ae64edbf552f7e040f988f6ea14f6ff9f87b684439c"
 
       define_method(:install) do
         bin.install "willow"
@@ -30,14 +30,14 @@ class Willow < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/iamrajjoshi/willow/releases/download/v1.2.1/willow_linux_amd64.tar.gz"
-      sha256 "24ea9074a525d1d69cf5a548b7ce809c1ce7d65d582ad33a20d1330efa4aaf1a"
+      sha256 "9f4158647daf7ac595036c2ff9137a8ba0cc0596f980ab91dc0752f70a991aee"
       define_method(:install) do
         bin.install "willow"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/iamrajjoshi/willow/releases/download/v1.2.1/willow_linux_arm64.tar.gz"
-      sha256 "cd290d82d490be33777c6761fc8cfabce81b3161f22e0cb42268409272f126dc"
+      sha256 "84228fa6f8d1925ae333a2f237cc67fb5e1bb5d1d4c8c6e8ebdb0c04b8f66394"
       define_method(:install) do
         bin.install "willow"
       end
