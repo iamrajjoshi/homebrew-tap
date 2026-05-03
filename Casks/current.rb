@@ -1,6 +1,6 @@
 cask "current" do
-  version "0.1.0"
-  sha256 "f19d33e37a065deb228b59dc4f9006cdd65c518f98e59fa0f35a4d748495b996"
+  version "0.1.1"
+  sha256 "8a961434075ddf4f96d8c334cf7d99f03e4f4f7fbbf2665ff51e53ed8b0b8d21"
 
   url "https://github.com/iamrajjoshi/current/releases/download/v#{version}/Current-#{version}.zip"
   name "Current"
