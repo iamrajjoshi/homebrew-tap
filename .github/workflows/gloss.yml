@@ -1,0 +1,33 @@
+name: Gloss Formula CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: macos-latest
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: 1
+      HOMEBREW_NO_INSTALL_CLEANUP: 1
+      HOMEBREW_NO_ENV_HINTS: 1
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tap local checkout
+        run: brew tap iamrajjoshi/tap "$GITHUB_WORKSPACE"
+
+      - name: Audit formula
+        run: brew audit --strict --online --new iamrajjoshi/tap/gloss
+
+      - name: Install from source
+        run: brew install --build-from-source iamrajjoshi/tap/gloss
+
+      - name: Test formula
+        run: brew test gloss
+
+      - name: Verify CLI
+        run: gloss --version
