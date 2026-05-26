@@ -4,8 +4,8 @@
 class Gloss < Formula
   desc "Local browser-based diff review for coding-agent loops"
   homepage "https://github.com/iamrajjoshi/gloss"
-  url "https://registry.npmjs.org/getgloss/-/getgloss-0.4.1.tgz"
-  sha256 "413637a2549efc769cf1ef7fd254280447354088579a3ec4fde7f23725fb168b"
+  url "https://registry.npmjs.org/getgloss/-/getgloss-0.4.2.tgz"
+  sha256 "fe47769d73629fd9e665e52e8832c586162d84febfc783d74baa5cf87c052140"
   license "MIT"
 
   depends_on "node"
