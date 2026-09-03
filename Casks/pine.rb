@@ -1,9 +1,9 @@
 cask "pine" do
-  version "0.1.0+8"
-  sha256 "6273671173500b4c18b012f579fe547b6da1aedc6d9192d6a3120c2dcf14c077"
+  version "0.1.0+9"
+  sha256 "afafb54b88b18827d60888da1d4ad004894fc17045885ed95d7d3f6da858ecc7"
 
   github_token = ENV.fetch("HOMEBREW_GITHUB_API_TOKEN", nil)
-  url "https://api.github.com/repos/iamrajjoshi/pine/releases/assets/542147803?version=#{version}",
+  url "https://api.github.com/repos/iamrajjoshi/pine/releases/assets/542199970?version=#{version}",
       header: [
         "Accept: application/octet-stream",
         github_token && "Authorization: Bearer #{github_token}",
